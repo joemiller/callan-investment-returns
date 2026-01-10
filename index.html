@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Callan-Style Daily Returns</title>
+  <title>Callan Periodic Table of Investment Returns (Daily)</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -151,7 +151,16 @@
       return React.createElement('div', { className: 'p-4 bg-white min-h-screen' },
         React.createElement('div', { className: 'max-w-6xl mx-auto' },
           React.createElement('h1', { className: 'text-2xl font-bold text-gray-800 mb-1' },
-            'Callan-Style Daily Returns'
+            'Callan Periodic Table of Investment Returns (Daily)'
+          ),
+          React.createElement('p', { className: 'text-xs text-gray-400 mb-2' },
+            'Inspired by the ',
+            React.createElement('a', {
+              href: 'https://www.callan.com/periodic-table/',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              className: 'text-blue-500 hover:underline'
+            }, 'official Callan Periodic Table')
           ),
           React.createElement('p', { className: 'text-sm text-gray-500 mb-4' },
             'Cumulative returns by asset class',

@@ -1,6 +1,6 @@
-# Callan-Style Daily Returns Chart
+# Callan Periodic Table of Investment Returns (Daily)
 
-A browser-based visualization of asset class returns, inspired by the Callan Periodic Table of Investment Returns.
+A browser-based visualization of daily asset class returns, inspired by the [official Callan Periodic Table](https://www.callan.com/periodic-table/).
 
 ## Features
 
