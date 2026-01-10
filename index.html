@@ -291,12 +291,35 @@
             )
           ),
 
-          React.createElement('div', { className: 'mt-4 text-xs text-gray-400' },
+          React.createElement('div', { className: 'mt-6 pt-4 border-t border-gray-200 text-xs text-gray-400' },
             React.createElement('p', null,
               'Data updated daily via GitHub Actions. Source: Yahoo Finance.'
             ),
             React.createElement('p', { className: 'mt-1' },
               'ETF proxies: SPY (Large Cap), IWM (Small Cap), EFA (Dev ex-US), EEM (Emerging), REET (Real Estate), AGG (US Bonds), BNDX (Intl Bonds), HYG (High Yield), BIL (Cash)'
+            ),
+            React.createElement('details', { className: 'mt-3' },
+              React.createElement('summary', { className: 'cursor-pointer hover:text-gray-600' },
+                'Notes on ETF selection vs Callan methodology'
+              ),
+              React.createElement('div', { className: 'mt-2 pl-4 text-gray-500 space-y-2' },
+                React.createElement('p', null,
+                  React.createElement('strong', null, 'Real Estate (REET): '),
+                  'Callan uses the FTSE EPRA Nareit Developed REIT Index. REET tracks the Global variant (developed + emerging). Emerging markets are ~5-10% of REET; over 70% is US-based. No US-listed ETF tracks the exact Developed variant.'
+                ),
+                React.createElement('p', null,
+                  React.createElement('strong', null, 'Intl Fixed Income (BNDX): '),
+                  'Callan uses the Bloomberg Global Aggregate ex-US Index unhedged. BNDX is USD-hedged, causing return differences when the USD moves significantly. No US-listed ETF tracks the unhedged aggregate (alternatives like IGOV/BWX are treasury-only, missing corporate bonds).'
+                )
+              )
+            ),
+            React.createElement('p', { className: 'mt-3' },
+              React.createElement('a', {
+                href: 'https://github.com/joemiller/callan-investment-returns',
+                target: '_blank',
+                rel: 'noopener noreferrer',
+                className: 'hover:text-gray-600'
+              }, 'View source on GitHub')
             )
           )
         )

@@ -42,17 +42,23 @@ A browser-based visualization of asset class returns, inspired by the Callan Per
 
 ## ETF Proxies
 
-| Asset Class | ETF |
-|-------------|-----|
-| Large Cap Equity | SPY |
-| Small Cap Equity | IWM |
-| Developed ex-US | EFA |
-| Emerging Markets | EEM |
-| Real Estate | VNQ |
-| US Fixed Income | AGG |
-| Intl Fixed Income | BNDX |
-| High Yield | HYG |
-| Cash Equivalent | BIL |
+| Asset Class | ETF | Index |
+|-------------|-----|-------|
+| Large Cap Equity | SPY | S&P 500 |
+| Small Cap Equity | IWM | Russell 2000 |
+| Developed ex-US | EFA | MSCI EAFE |
+| Emerging Markets | EEM | MSCI Emerging Markets |
+| Real Estate | REET | FTSE EPRA Nareit Global REITs |
+| US Fixed Income | AGG | Bloomberg US Aggregate Bond |
+| Intl Fixed Income | BNDX | Bloomberg Global Aggregate ex-USD (hedged) |
+| High Yield | HYG | iBoxx USD Liquid High Yield |
+| Cash Equivalent | BIL | 1-3 Month US T-Bills |
+
+### Notes on ETF Selection
+
+**Real Estate (REET):** Callan uses the FTSE EPRA Nareit *Developed* REIT Index. We use REET which tracks the *Global* variant (developed + emerging markets). The difference is small—emerging markets are only ~5-10% of REET, and over 70% is US-based. No US-listed ETF tracks the exact Developed variant.
+
+**International Fixed Income (BNDX):** Callan uses the Bloomberg Global Aggregate ex-US Index *unhedged*. BNDX is USD-hedged, which causes return differences when the USD moves significantly. For example, in periods of USD weakness, Callan's unhedged index outperforms BNDX. No US-listed ETF tracks the unhedged aggregate (alternatives like IGOV and BWX are treasury-only, missing corporate bonds).
 
 ## Local Development
 
